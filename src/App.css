@@ -41,5 +41,9 @@
 }
 
 .icon {
+    cursor: pointer;
+}
+
+.iconMoon {
     color: white;
 }

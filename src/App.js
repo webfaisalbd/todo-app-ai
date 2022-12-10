@@ -10,12 +10,14 @@ function App() {
 
 
   return (
-    <ThemeContext.Provider value={{darkMode, setdarkMode}}>
+    <ThemeContext.Provider value={{ darkMode, setdarkMode }}>
       <div className={darkMode ? "dark-body" : "light-body"}>
 
         <div className="title">
           <h1 className={darkMode ? "dark-text" : "light-text"}>My Tasks</h1>
-          <div onClick={() => setdarkMode(!darkMode)}>{darkMode ? <span className="icon"><FaMoon /></span> : <FaSun />}</div>
+          <div onClick={() => setdarkMode(!darkMode)}>{darkMode ?
+            <span className="icon iconMoon"><FaMoon /></span> : <span className="icon"><FaSun /></span>}
+          </div>
         </div>
 
         <Home />
