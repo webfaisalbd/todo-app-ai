@@ -1,13 +1,13 @@
 import React from 'react'
 import Todo from './Todo'
 
-const Todos = ({ todos }) => {
-    console.log(todos);
+const Todos = ({ todos, onDeleteTodo }) => {
+
     return (
         <>
             {
                 todos.map((todo) => {
-                    return <Todo todo={todo.newTodo} key={todo.id} />
+                    return <Todo todo={todo.newTodo} todoId={todo.id} key={todo.id} onDeleteTodo={onDeleteTodo} />
                 })
             }
         </>

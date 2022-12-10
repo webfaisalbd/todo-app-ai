@@ -1,5 +1,6 @@
 label {
     display: block;
+    font-weight: 600;
 }
 
 input {
@@ -15,6 +16,11 @@ input {
     margin: 15px;
 }
 
+.formDesign {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
 button {
     width: 100%;
     padding: 10px;
@@ -23,4 +29,6 @@ button {
     border-radius: 10px;
     color: white;
     font-size: 16px;
+
+    cursor: pointer;
 }

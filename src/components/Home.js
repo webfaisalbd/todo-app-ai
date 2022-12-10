@@ -15,9 +15,18 @@ const Home = () => {
 
     const addTodo = (newTodo) => {
         setTodos((preTodo) => {
-            return [...preTodo, {id: new Date().getTime(), newTodo}]
+            return [...preTodo, { id: new Date().getTime(), newTodo }]
         });
         console.log(todos);
+    }
+
+    const deleteTodo = (myTodoId) => {
+        // console.log(myTodoId)
+        const filtered = todos.filter((todo) => {
+            return todo.id !== myTodoId;
+        })
+        // console.log(filtered);
+        setTodos(filtered);
     }
 
     return (
@@ -27,7 +36,7 @@ const Home = () => {
                 <div>mode</div>
             </div>
             <NewTodo onHandleTodo={addTodo} />
-            <Todos todos={todos} />
+            <Todos todos={todos} onDeleteTodo={deleteTodo} />
         </div>
     )
 }

@@ -3,8 +3,14 @@ import React from 'react'
 import { GoTrashcan } from "react-icons/go";
 import style from './Todo.module.css'
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo,todoId, onDeleteTodo }) => {
     const { title, desc } = todo;
+
+    const handleDelete = (todoId) => {
+        // alert(todoId);
+        onDeleteTodo(todoId)
+      }
+
     return (
         <>
             <section className={style.singleTodo}>
@@ -13,7 +19,7 @@ const Todo = ({ todo }) => {
                     <p>{desc}</p>
                 </div>
                 <div>
-                    <button className={style.btn}> <GoTrashcan /> </button>
+                    <button onClick={()=> handleDelete(todoId)} className={style.btn}> <GoTrashcan /> </button>
                 </div>
             </section>
         </>

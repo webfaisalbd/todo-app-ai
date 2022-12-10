@@ -22,7 +22,7 @@ const NewTodo = (props) => {
 
 
   return (
-    <>
+    <div className={style.formDesign}>
       <form onSubmit={handleSubmit}>
         <div className={style.formDiv}>
           <label htmlFor="title">Title: </label>
@@ -36,7 +36,7 @@ const NewTodo = (props) => {
           <button type='submit'>Submit</button>
         </div>
       </form>
-    </>
+    </div>
   )
 }
 
