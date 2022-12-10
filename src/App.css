@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 7px;
+    padding: 7px;
+    width: 40%;
+    margin: 0 auto;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-text {
+    color: rgba(193, 194, 197, 1);
+}
+
+.light-text {
+    color: black;
+}
+
+.singleTodo-dark-content {
+    background: rgba(37, 38, 43, 1);
+}
+
+.singleTodo-light-content {
+    background: white;
+}
+
+.dark-body {
+    background: rgb(26, 27, 30);
+}
+
+.light-body {
+    background: white;
+}
+
+.icon {
+    color: white;
+}

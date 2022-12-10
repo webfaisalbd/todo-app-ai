@@ -17,7 +17,7 @@ const Home = () => {
         setTodos((preTodo) => {
             return [...preTodo, { id: new Date().getTime(), newTodo }]
         });
-        console.log(todos);
+        // console.log(todos);
     }
 
     const deleteTodo = (myTodoId) => {
@@ -31,10 +31,6 @@ const Home = () => {
 
     return (
         <div className={style.container}>
-            <div className={style.title}>
-                <h1>My Tasks</h1>
-                <div>mode</div>
-            </div>
             <NewTodo onHandleTodo={addTodo} />
             <Todos todos={todos} onDeleteTodo={deleteTodo} />
         </div>

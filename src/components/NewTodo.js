@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 import style from './NewTodo.module.css'
+import { ThemeContext } from './ThemeContext';
 
 const NewTodo = (props) => {
   const [todo, setTodo] = useState({ title: "", desc: "" });
@@ -20,17 +21,19 @@ const NewTodo = (props) => {
     setTodo({ title: '', desc: '' });
   }
 
+  const {darkMode} = useContext(ThemeContext);
+
 
   return (
     <div className={style.formDesign}>
       <form onSubmit={handleSubmit}>
         <div className={style.formDiv}>
-          <label htmlFor="title">Title: </label>
-          <input type="text" onChange={handleChange} name="title" value={title} placeholder="Task Title" />
+          <label  className={darkMode ? "dark-text" : "light-text"} htmlFor="title">Title: </label>
+          <input type="text" onChange={handleChange} name="title" value={title} placeholder="Task Title" required />
         </div>
         <div className={style.formDiv}>
-          <label htmlFor="desc">Summary: </label>
-          <input type="text" onChange={handleChange} name="desc" value={desc} placeholder="Task Summary" />
+          <label  className={darkMode ? "dark-text" : "light-text"} htmlFor="desc">Summary: </label>
+          <input type="text" onChange={handleChange} name="desc" value={desc} placeholder="Task Summary" required />
         </div>
         <div className={style.formDiv}>
           <button type='submit'>Submit</button>
