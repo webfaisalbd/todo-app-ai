@@ -6,8 +6,18 @@
 
 .container {
     min-height: 100vh;
-    width: 600px;
+    width: 40%;
     margin: 0 auto;
     /* background: whitesmoke; */
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
+}
+
+.title {
+    margin: 7px;
+    padding: 5px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
